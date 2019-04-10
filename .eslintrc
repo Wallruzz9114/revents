@@ -1,0 +1,54 @@
+{
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "new-cap": [2, { "capIsNewExceptions": ["List", "Map", "Set"] }],
+    "react/no-multi-comp": 0,
+    "import/default": 0,
+    "import/no-duplicates": 0,
+    "import/named": 0,
+    "import/namespace": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 2,
+    "comma-dangle": 0,
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "no-console": 0,
+    "no-alert": 0,
+    "react/prefer-stateless-function": [0, true],
+    "react/jsx-one-expression-per-line": [0, { "allow": "none" }],
+    "padded-blocks": "off",
+    "react/jsx-curly-spacing": [0, { "when": "always" }],
+    "no-trailing-spaces": "off",
+    "jsx-quotes": "off",
+    "jsx-a11y/label-has-associated-control": [0, { }],
+    "jsx-a11y/label-has-for": [0, {}],
+    "react/prop-types": 0,
+    "react/destructuring-assignment": [0, "always", { }],
+    "only-arrow-functions": true,
+    "react/no-access-state-in-setstate": "off",
+    "no-param-reassign": "off"
+  },
+  "plugins": [
+    "react", "import"
+  ],
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      "moduleDirectory": ["node_modules", "src"]
+    }
+  },
+  "globals": {
+    "__DEVELOPMENT__": true,
+    "__CLIENT__": true,
+    "__SERVER__": true,
+    "__DISABLE_SSR__": true,
+    "__DEVTOOLS__": true,
+    "socket": true,
+    "webpackIsomorphicTools": true
+  }
+}
